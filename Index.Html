@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Örnek</title>
+</head>
+<body>
+    
+    <div style="background:blue;color: white;font-size: larger;height: 120px; text-align: center;"> 
+        
+        Tıklama Sayısı : <span id="LCD" style="background:blue;color: rgb(163, 238, 24);font-size: larger">0</span>
+
+    </div>
+
+    <div id="dvTikla" style="background:red;color: white;"> 
+
+            Buraya Tıkla
+
+    </div>
+    
+
+</body>
+<script type="text/javascript">
+
+    var TikSayisi = 0;
+
+    var Ekran = document.getElementById("LCD");
+
+    Ekran.innerText = TikSayisi;
+
+    var Komut = document.getElementById("dvTikla") ;
+
+    Komut.addEventListener("click", ()=> {
+       // alert("Hello");
+       // Debug Ekranı na yazdır
+       console.log("Tıklama Sayısı :" , TikSayisi );
+
+       TikSayisi ++;
+
+       Ekran.innerText = TikSayisi;
+
+    })
+
+</script>
+</html>
